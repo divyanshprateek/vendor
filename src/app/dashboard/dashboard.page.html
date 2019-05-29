@@ -1,0 +1,163 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>vendor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="trip card" margin-bottom>
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-avatar>
+                <img class="avatar" src="../assets/imgs/avatar.png">
+              </ion-avatar>
+            </ion-col>
+            <ion-col padding>
+              <p>Mr. Abhijeet Kumar</p>
+              <p>+91 9102012903</p>
+              <p>ashabs18@gmail.com</p>
+              <p>R7, D1705, Life Republic, Marunji</p>
+              <div class="button-group">
+                <ion-button size="small" color="secondary">Edit</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div>
+          <h1 text-center>Bharat fresh Mart</h1>
+        </div>
+        <div>
+          <ion-button color="secondary" fill="outline">Start Service</ion-button>
+          <ion-button color="danger">Stop Service</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div>
+    <ion-button fill="outline" color="secondary" expand="block">
+      Services
+      <ion-icon name="arrow-dropdown" slot="end"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="" padding>
+    <h2 class="fs-14">New Order</h2>
+    <br />
+    <br />
+    <ion-slides pager="false" class="slide-side" [options]="slideSideOpts">
+      <ion-slide (click)= "openPop($event)">
+        <div class="elmt-slide">
+          <div class="thumb-img">
+            <img src="../assets/imgs/new_order.png">
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="elmt-slide">
+          <div class="thumb-img">
+            <img src="assets/imgs/new_order.png">
+          </div>
+          <div class="wrap-collection">
+            <div class="name-collection">
+              <h4 class="fs-12 txt-light">{{ time }}</h4>
+            </div>
+            <div class="name-collection-new-order">
+              <h4 class="fs-25">25</h4>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="elmt-slide">
+          <div class="thumb-img">
+            <img src="assets/imgs/new_order.png">
+          </div>
+          <div class="main-txt" text-left>
+            <hr>
+            <h4 no-margin class="txt2 fw-600 fs-12 ellipsis uppercase">Lorem Ipsum</h4>
+            <p no-margin class="txt3 fs-12 ellipsis">Various versions have evolved</p>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="">
+    <div class="st-name">
+      <h2 no-margin class="uppercase fs-12">Orders History</h2>
+      <ion-button class="fs-16 txt4" size="small" fill="clear">
+        <ion-icon slot="icon-only" name="ios-arrow-round-forward"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="wrap-slides-profile">
+      <ion-slides pager="false" [options]="slideProfileOpts">
+        <ion-slide>
+          <div class="wrap-collection">
+            <div class="img-collection shadow-3 bdra-5">
+              <img src="../assets/imgs/order.png">
+            </div>
+            <div class="name-collection">
+              <h4 class="fs-12 txt-light">{{ time }}</h4>
+            </div>
+            <div class="name-collection-order">
+              <h4 class="fs-25">23</h4>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="wrap-collection">
+            <div class="img-collection shadow-3 bdra-5">
+              <img src="../assets/imgs/order.png">
+            </div>
+            <div class="name-collection">
+              <h4 class="fs-12 txt-light">{{ time }}</h4>
+            </div>
+            <div class="name-collection-order">
+              <h4 class="fs-25">24</h4>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="wrap-collection">
+            <div class="img-collection shadow-3 bdra-5">
+              <img src="../assets/imgs/order.png">
+            </div>
+            <div class="name-collection">
+              <h4 class="fs-12 txt-light">{{ time }}</h4>
+            </div>
+            <div class="name-collection-order">
+              <h4 class="fs-25">25</h4>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+  <ion-card class="card-todays-status" (click)="openModal()">
+    <ion-card-content>
+      <ion-grid class="grid-border">
+        <ion-row>
+          <ion-col class="col-color" text-center>
+            Total Order
+          </ion-col>
+          <ion-col class="col-color" text-center>
+            Total Transaction
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            15
+          </ion-col>
+          <ion-col>
+            Rs 1500
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
